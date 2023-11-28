@@ -20,6 +20,15 @@ const icon_mdi_web =
 export default defineConfig({
   title: "桐菊麻瓜指南",
   description: "这个文档是用来教会我们俱乐部成员如何快速入门学会这些工具。",
+  markdown: {
+    container: {
+      tipLabel: "提示",
+      warningLabel: "警告",
+      dangerLabel: "危险",
+      infoLabel: "信息",
+      detailsLabel: "详细信息",
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -30,7 +39,14 @@ export default defineConfig({
     sidebar: [
       {
         text: "快速入门",
-        items: [{ text: "第一步", link: "quick-start/first-step" }],
+        rel: "quick-start/first-step",
+        items: [
+          { text: "第一步", link: "quick-start/first-step" },
+          {
+            text: "简单介绍各个应用",
+            link: "quick-start/a-brief-introdction-for-applications",
+          },
+        ],
       },
     ],
 
