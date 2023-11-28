@@ -8,7 +8,7 @@ hero:
   tagline: 给家人们介绍一下我们服务器上的应用的使用方法。
   actions:
     - theme: brand
-      text: 快速入门
+      text: 快速入门 →
       link: /quick-start/first-step
 
 features:

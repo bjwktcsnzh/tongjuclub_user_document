@@ -20,7 +20,7 @@ const icon_mdi_web =
 export default defineConfig({
   title: "桐菊麻瓜指南",
   description: "这个文档是用来教会我们俱乐部成员如何快速入门学会这些工具。",
-  base:"/tongjuclub_user_document/",
+  base: "/tongjuclub_user_document/",
   markdown: {
     container: {
       tipLabel: "提示",
@@ -31,29 +31,49 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    socialLinks: [
+      { icon: { svg: icon_mdi_web }, link: "https://dashy.tong-ju.top:8443" },
+      // { icon: 'mastodon', link: 'https://github.com/vuejs/vitepress' }
+    ],
+
+    editLink: {
+      pattern:
+        "https://github.com/tongjuclub/tongjuclub_user_document/blob/main/docs/:path",
+      text: "Edit this page on GitHub",
+    },
+
+    lastUpdated: {
+      text: "最后更新于 ",
+      formatOptions: {
+        dateStyle: "full",
+        timeStyle: "medium",
+      },
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
       { text: "快速入门", link: "quick-start/first-step" },
     ],
-
     sidebar: [
       {
         text: "快速入门",
-        rel: "quick-start/first-step",
+        base: "quick-start/",
         items: [
-          { text: "第一步", link: "quick-start/first-step" },
+          {
+            text: "第一步",
+            link: "first-step",
+          },
           {
             text: "简单介绍各个应用",
-            link: "quick-start/a-brief-introdction-for-applications",
+            link: "a-brief-introdction-for-applications",
           },
         ],
       },
-    ],
-
-    socialLinks: [
-      { icon: { svg: icon_mdi_web }, link: "https://dashy.tong-ju.top:8443" },
-      // { icon: 'mastodon', link: 'https://github.com/vuejs/vitepress' }
+      {
+        text: "n8n详解",
+        link: "n8n/readme",
+        items: [],
+      },
     ],
   },
 });

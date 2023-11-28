@@ -1,3 +1,10 @@
+---
+prev: false
+next:
+  text: '简单介绍各个应用'
+  link: 'quick-start/a-brief-introdction-for-applications'
+---
+
 # 第一步
 
 啊，第一步。第一步就是打开浏览器。然后输入网址：https://dashy.tong-ju.top:8443
