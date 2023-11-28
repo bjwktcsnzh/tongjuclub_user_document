@@ -20,6 +20,7 @@ const icon_mdi_web =
 export default defineConfig({
   title: "桐菊麻瓜指南",
   description: "这个文档是用来教会我们俱乐部成员如何快速入门学会这些工具。",
+  base:"/tongjuclub_user_document/",
   markdown: {
     container: {
       tipLabel: "提示",
