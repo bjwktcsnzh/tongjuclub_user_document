@@ -31,6 +31,10 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    search: {
+      provider: "local",
+    },
+
     socialLinks: [
       { icon: { svg: icon_mdi_web }, link: "https://dashy.tong-ju.top:8443" },
       // { icon: 'mastodon', link: 'https://github.com/vuejs/vitepress' }
