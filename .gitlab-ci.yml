@@ -24,12 +24,10 @@ pages:
     - echo '======== Test build ========'
     - npm run docs:build
     - echo '======== Test build successfully ========'
-  artifacts:
-    paths:
-      - ./docs/.vitepress/dist
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   environment: production
+  publish: ./docs/.vitepress/dist
 
 
 
