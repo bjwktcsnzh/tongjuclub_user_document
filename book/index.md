@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "二本科技使用指南"
+  name: "桐菊二本科技"
   text: ""
-  tagline: 给家人们介绍一下我们服务器上的应用的使用方法。
+  tagline: 升级二本科技，吊打杂鱼杂鱼。
   actions:
     - id: quick_start
       theme: brand
