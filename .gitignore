@@ -1,3 +1,6 @@
+book/.vitepress/dist
+book/.vitepress/cache
+
 # Created by https://www.toptal.com/developers/gitignore/api/node,vuejs,windows,linux,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,vuejs,windows,linux,macos
 
@@ -202,11 +205,6 @@ Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
-
-docs/.vitepress/dist
-docs/.vitepress/cache
-
-
 
 # Dump file
 *.stackdump

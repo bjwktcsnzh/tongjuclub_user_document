@@ -1,8 +1,12 @@
 import { defineConfig } from "vitepress";
+import { quick_start_sidebar } from "./sidebar.node.js";
+import { index_fm_actions, book_title, book_description } from "./home.node.ts";
+
+const quick_start = index_fm_actions.find((it) => it.id == "quick_start")!!;
 
 const icon_mdi_web =
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
-  "<title>web</title>" +
+  "<title>前往服务器主页</title>" +
   '<path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74' +
   "C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,1" +
   "7.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12" +
@@ -18,8 +22,9 @@ const icon_mdi_web =
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "桐菊麻瓜指南",
-  description: "这个文档是用来教会我们俱乐部成员如何快速入门学会这些工具。",
+  lang: "zh-CN",
+  title: book_title,
+  description: book_description,
   base: "/tongjuclub_user_document/",
   markdown: {
     container: {
@@ -36,7 +41,10 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: { svg: icon_mdi_web }, link: "https://dashy.tong-ju.top:8443" },
+      {
+        icon: { svg: icon_mdi_web },
+        link: "https://dashy.tong-ju.top:8443",
+      },
       // { icon: 'mastodon', link: 'https://github.com/vuejs/vitepress' }
     ],
 
@@ -55,23 +63,13 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "快速入门", link: "quick-start/first-step" },
+      { text: "主页", link: "/" },
+      { text: quick_start.text, link: quick_start.link },
     ],
     sidebar: [
       {
-        text: "快速入门",
-        base: "quick-start/",
-        items: [
-          {
-            text: "第一步",
-            link: "first-step",
-          },
-          {
-            text: "简单介绍各个应用",
-            link: "a-brief-introdction-for-applications",
-          },
-        ],
+        text: quick_start.text,
+        items: quick_start_sidebar,
       },
       {
         text: "n8n详解",

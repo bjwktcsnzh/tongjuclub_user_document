@@ -1,10 +1,16 @@
 {
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "dev": "vitepress dev book",
+    "build": "vitepress build book",
+    "preview": "vitepress preview book"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.31"
+    "@types/node": "^20.10.1",
+    "@web-printer/vitepress": "^0.4.0",
+    "fast-glob": "^3.3.2",
+    "gray-matter": "^4.0.3",
+    "ts-node": "^10.9.1",
+    "vitepress": "^1.0.0-rc.31",
+    "vitest": "^0.34.6"
   }
 }
