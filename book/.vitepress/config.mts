@@ -50,8 +50,8 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        "https://github.com/tongjuclub/tongjuclub_user_document/blob/main/docs/:path",
-      text: "Edit this page on GitHub",
+        "https://github.com/tongjuclub/tongjuclub_user_document/blob/main/book/:path",
+      text: "在 GitHub 上编辑此页",
     },
 
     lastUpdated: {
